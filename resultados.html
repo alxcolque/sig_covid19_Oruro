@@ -33,13 +33,10 @@
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item mx-0 mx-lg-1">
-            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#introducción">Introduccion</a>
+            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#intro">Inicio</a>
           </li>
           <li class="nav-item mx-0 mx-lg-1">
             <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#aptos">Aptos</a>
-          </li>
-          <li class="nav-item mx-0 mx-lg-1">
-            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#noaptos">No aptos</a>
           </li>
           <li class="nav-item mx-0 mx-lg-1">
             <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#municipios">Covid Por Mun</a>
@@ -64,7 +61,7 @@
 
     </div>
   </header>
-  <section class="" id="teoria">
+  <section class="" id="intro">
     <div class="container-fluid">
         <br>
         <div class="col-sm-12">
@@ -97,14 +94,45 @@
 
     </div> <!-- .content -->
   </section>
-  <section class="" id="aptos">
+  <section class="bg-secondary text-white mb-0" id="aptos" >
     <div class="container-fluid">
+        
+        <div class="card mb-3">
+            <div class="card-header">
+              <ul class="list-group">
+                <li class="list-group-item"><span class="m-l-10 text-secondary "><b><h2>Municipios Aptos y no Aptos</h2></b>
+                  <p></p><span class="m-l-10 text-secondary">
+                      <b>
+                        Municiopios Seleccionados por su índice de riesgos
+                    </b>
+                  </p>
+              </li>
+            </ul>
+              <div class="form-row">
+                <div class="form-group col-md-3">
+                </div>
+                <div class="form-group col-md-6">
+                  <label for="sel_apto">Municipios Aptos para retor a sus actividades para 2021</label>
+                  <select id="sel_apto" name="apto" class="form-control" onchange="ShowSelected();">
+                    <option selected>Seleccione</option>
+                    <option value="1">Municipios Aptos</option> 
+                    <option value="2">Municipios NO Aptos</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+        </div>
+        
+    </div> <!-- .content -->
+
+
+    <div class="container-fluid" id="myDIV" style="display: none">
       <div class="card mb-3">
         <div class="card-body">
-          <div class="row">
-                <div class="card-body col-lg-8">
+          <div class="row d-flex justify-content-center">
+                <div class="card-body">
                   <ul class="list-group">
-                      <li><span class="m-l-10 text-secondary "><b><h2>Aptos</h2></b>
+                      <li  class="list-group-item"><span class="m-l-10 text-secondary "><b><h2>Aptos</h2></b>
                         <p></p><span class="m-l-10 text-secondary">
                             <b>
                               Mun Aptos para retorno a sus actividades
@@ -112,11 +140,12 @@
                         </p>
                     </li>
                   </ul>
+                  <ul class="list-group">
+                    <li class="list-group-item"> <img class="img-fluid" src="img/CovidMunAptos2021JPG.jpg" alt=""> </li>
+                  </ul>
               </div>
-              <div class="card-body col-lg-4">
-                <ul class="list-group">
-                  <li class="list-group-item"> <img class="img-fluid" src="img/CovidMunAptos2021JPG.jpg" alt=""  width="500" height="500"> </li>
-                </ul>
+              <div class="card-body">
+                
             </div>
           </div>
         </div>
@@ -128,29 +157,25 @@
         </div>
       </div>
     </div> <!-- .content -->
-  </section>
 
-  <section class="" id="noaptos">
-    <div class="container-fluid">
+    <div class="container-fluid" id="myDIV1" style="display: none">
       <div class="card mb-3">
         <div class="card-body">
           <div class="row">
-                <div class="card-body col-lg-8">
+                <div class="card-body">
                   <ul class="list-group">
-                      <li><span class="m-l-10 text-secondary "><b><h2>No Aptos</h2></b>
+                      <li class="list-group-item"><span class="m-l-10 text-secondary "><b><h2>No Aptos</h2></b>
                         <p></p><span class="m-l-10 text-secondary">
                             <b>
-                              Mun No Aptos para retorno a sus actividades
+                              Municipios No Aptos para retornar a sus actividades
                           </b>
                         </p>
                     </li>
                   </ul>
+                  <ul class="list-group">
+                    <li class="list-group-item"> <img class="img-fluid" src="img/CovidMunNoAptos2021JPG.jpg" alt="" > </li>
+                  </ul>
               </div>
-              <div class="card-body col-lg-4">
-                <ul class="list-group">
-                  <li class="list-group-item"> <img class="img-fluid" src="img/CovidMunNoAptos2021JPG.jpg" alt="" > </li>
-                </ul>
-            </div>
           </div>
         </div>
         <div class="text-center mt-4">
@@ -161,6 +186,16 @@
         </div>
       </div>
     </div> <!-- .content -->
+
+
+  </section>
+
+  
+
+
+
+  <section class="" id="noaptos">
+    
   </section>
 
   <section class="" id="municipios">
@@ -168,9 +203,9 @@
       <div class="card mb-3">
         <div class="card-body">
           <div class="row">
-                <div class="card-body col-lg-8">
+                <div class="card-body ">
                   <ul class="list-group">
-                      <li><span class="m-l-10 text-secondary "><b><h2>Por municipios</h2></b>
+                      <li class="list-group-item"><span class="m-l-10 text-secondary "><b><h2>Por municipios</h2></b>
                         <p></p><span class="m-l-10 text-secondary">
                             <b>
                               reporte de virus por municipios
@@ -178,12 +213,10 @@
                         </p>
                     </li>
                   </ul>
+                  <ul class="list-group">
+                    <li class="list-group-item"> <img class="img-fluid" src="img/CovidPorMunicipiosOruro.jpg" alt=""  width="1000" height="1000"> </li>
+                  </ul>
               </div>
-              <div class="card-body col-lg-4">
-                <ul class="list-group">
-                  <li class="list-group-item"> <img class="img-fluid" src="img/CovidPorMunicipiosOruro.jpg" alt=""  width="500" height="500"> </li>
-                </ul>
-            </div>
           </div>
         </div>
         <div class="text-center mt-4">
@@ -201,9 +234,9 @@
       <div class="card mb-3">
         <div class="card-body">
           <div class="row">
-                <div class="card-body col-lg-8">
+                <div class="card-body">
                   <ul class="list-group">
-                      <li><span class="m-l-10 text-secondary "><b><h2>radio bases</h2></b>
+                      <li class="list-group-item"><span class="m-l-10 text-secondary "><b><h2>radio bases</h2></b>
                         <p></p><span class="m-l-10 text-secondary">
                             <b>
                               Las radio bases
@@ -211,12 +244,10 @@
                         </p>
                     </li>
                   </ul>
+                  <ul class="list-group">
+                    <li class="list-group-item"> <img class="img-fluid" src="img/MunicipiosCoberturaRadioBases.jpg" alt=""  width="1000" height="1000"> </li>
+                  </ul>
               </div>
-              <div class="card-body col-lg-4">
-                <ul class="list-group">
-                  <li class="list-group-item"> <img class="img-fluid" src="img/MunicipiosCoberturaRadioBases.jpg" alt=""  width="500" height="500"> </li>
-                </ul>
-            </div>
           </div>
         </div>
         <div class="text-center mt-4">
@@ -275,6 +306,30 @@
     </a>
   </div>
 
+  <script>
+   function ShowSelected(){
+    var x = document.getElementById("myDIV");
+    var y = document.getElementById("myDIV1");
+    var cod = document.getElementById("sel_apto").value;
+    if(cod === "1"){
+      if (x.style.display === "none") {
+        x.style.display = "block";
+      } else {
+        x.style.display = "none";
+      }
+    }else if(cod === "2"){
+      if (y.style.display === "none") {
+        y.style.display = "block";
+      } else {
+        y.style.display = "none";
+      }
+    }else{
+      alert('Seleccione una opcion válida');
+    }
+
+    }
+  </script>
+
   <!-- Bootstrap core JavaScript -->
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -288,6 +343,7 @@
 
   <!-- Custom scripts for this template -->
   <script src="js/freelancer.min.js"></script>
+
 </body>
 
 </html>
